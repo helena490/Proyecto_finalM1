@@ -130,13 +130,13 @@
           6:{
             nombre: "Arbalestero pesado 6",
             estadisticas: ["Fuerza: 940", "Salud: 2820", "Capacidad de carga: 100"],
-            caracteristicas: ["Guardia, Humano, Unidad a distancia", "Fuerza contra unidades cuerpo a cuerpo: +395%", "Fuerza contra fortificaciones: +509%"],
+            caracteristicas: ["Guardia, Humano, Unidad a distancia", "Fuerza contra unidades cuerpo a cuerpo: +395%", "Fuerza contra unidades voladoras: +509%"],
             imagen: "./IMG/arbalesVI.png", 
           },
           7:{
             nombre: "Arbalestero pesado 7",
             estadisticas: ["Fuerza: 1700", "Salud: 5100", "Capacidad de carga: 100"],
-            caracteristicas: ["Guardia, Humano, Unidad a distancia", "Fuerza contra unidades cuerpo a cuerpo: +592%", "Fuerza contra fortificaciones: +763%"],
+            caracteristicas: ["Guardia, Humano, Unidad a distancia", "Fuerza contra unidades cuerpo a cuerpo: +592%", "Fuerza contra unidades voladoras: +763%"],
             imagen: "./IMG/arbalesVII.png", 
           },
         },
@@ -154,28 +154,42 @@
             imagen: "./IMG/alabarderoVII.png", 
           },
         },
-        caballeroPesado:{
+        caballeroMont:{
           6:{
             nombre: "Caballero montado 6",
             estadisticas: ["Fuerza: 1900", "Salud: 5700", "Capacidad de carga: 200"],
-            caracteristicas: ["Guardia, Humano, Unidad montada", "Fuerza contra unidades a distancia: +494%", "Fuerza contra bestias: +410%"],
+            caracteristicas: ["Guardia, Humano, Unidad montada", "Fuerza contra unidades a distancia: +494%", "Fuerza contra armas de asedio: +410%"],
             imagen: "./IMG/caballeromontadoVI.png",   
           },
           7:{
             nombre: "Caballero montado 7",
             estadisticas: ["Fuerza: 3400", "Salud: 10 200", "Capacidad de carga: 200"],
-            caracteristicas: ["Guardia, Humano, Unidad montada", "Fuerza contra unidades a distancia: +740%", "Fuerza contra bestias: +615%"],
+            caracteristicas: ["Guardia, Humano, Unidad montada", "Fuerza contra unidades a distancia: +740%", "Fuerza contra armas de asedio: +615%"],
             imagen: "./IMG/caballeromontadoVII.png",   
           },
         },
         purificador:{
           1:{
-          nombre: "Caballero montado 7",
-            estadisticas: ["Fuerza: 3400", "Salud: 10 200", "Capacidad de carga: 200"],
-            caracteristicas: ["Guardia, Humano, Unidad montada", "Fuerza contra unidades a distancia: +740%", "Fuerza contra bestias: +615%"],
-            imagen: "./IMG/caballeromontadoVII.png", 
+            nombre: "Purificador 1",
+            estadisticas: ["Fuerza: 3060", "Salud: 9180", "Capacidad de carga: 100"],
+            caracteristicas: ["Guardia, Humano, Unidad a distancia", "Fuerza contra unidades cuerpo a cuerpo: +888%", "Fuerza contra unidades voladoras: +1145%"],
+            imagen: "./IMG/purificadorI.png", 
+        },
+        2:{
+            nombre: "Purificador 2",
+            estadisticas: ["Fuerza: 5510", "Salud: 16 530", "Capacidad de carga: 100"],
+            caracteristicas: ["Guardia, Humano, Unidad a distancia", "Fuerza contra unidades cuerpo a cuerpo: +1333%", "Fuerza contra unidades voladoras: +1717%"],
+            imagen: "./IMG/purificadorII.png", 
         },
       },
+        castigador:{
+          1:{
+            nombre: "Castigador 1",
+            estadisticas: ["Fuerza: 3060", "Salud: 9180", "Capacidad de carga: 250"],
+            caracteristicas: ["Guardia, Humano, Unidad cuerpo a cuerpo", "Fuerza contra unidades montadas: +667%", "Fuerza contra bestias: +1367%"],
+            imagen: "./IMG/castigadorI.png",            
+          },
+        },
       };
 
       // Función para actualizar los niveles de tropa según el tipo seleccionado
@@ -299,9 +313,9 @@
         <option value="grifoB">Grifo de batalla</option>
         <option value="arbalestero">Arbalestero pesado</option>
         <option value="alabardero">Alabardero pesado</option>
-        <option value="caballeroPesado">Caballero montado</option>
+        <option value="caballeroMont">Caballero montado</option>
         <option value="purificador">Purificador</option>
-        <option value="arquero">Arquero</option>
+        <option value="castigador">Castigador</option>
         <option value="arquero">Arquero</option>
         <option value="arquero">Arquero</option>
         <option value="arquero">Arquero</option>
