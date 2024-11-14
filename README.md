@@ -1,6 +1,6 @@
 # Página Web de Características de Tropas - Total Battle
 
-Este proyecto es una página web interactiva que permite a los usuarios explorar las características, estadísticas y niveles de las diferentes categorías de tropas en el videojuego **Total Battle**. Los usuarios pueden seleccionar el tipo de tropa y nivel para obtener una descripción detallada y ver una imagen representativa.
+Este proyecto es una página web interactiva hecha con apoyo de IA, que permite a los usuarios explorar las características, estadísticas y niveles de las diferentes categorías de tropas en el videojuego **Total Battle**. Los usuarios pueden seleccionar el tipo de tropa y nivel para obtener una descripción más detallada y ver una imagen representativa.
 
 ## Tabla de Contenidos
 - [Descripción](#descripción)
@@ -13,7 +13,7 @@ Este proyecto es una página web interactiva que permite a los usuarios explorar
 - [Licencia](#licencia)
 
 ## Descripción
-La página web muestra información detallada de tropas del juego *Total Battle*, organizadas por **Tipo** (como infantería, caballería, arqueros) y **Nivel**. Cada combinación muestra el nombre de la tropa, estadísticas de combate y características. Además, se muestra una imagen ilustrativa de cada tropa a la izquierda de las descripciones.
+La página web muestra información detallada de tropas del juego *Total Battle*, organizadas por **Tipo** y **Nivel**. Cada combinación muestra el nombre de la tropa, estadísticas de combate y características. Además, se muestra una imagen ilustrativa de cada tropa a la izquierda de las descripciones.
 
 ## Funcionalidades
 - Selección de **tipo de tropa** desde un menú desplegable.
