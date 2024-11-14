@@ -106,6 +106,76 @@
             imagen: "./IMG/arqueroV.png",
           }, 
         },
+        grifoB:{
+          5:{
+            nombre: "Grifo de batalla 5",
+            estadisticas: ["Fuerza: 10 000", "Salud: 30 000", "Capacidad de carga: 1000"],
+            caracteristicas: ["Guardia, Bestia, Unidad voladora", "Fuerza contra unidades montadas: +395%", "Fuerza contra fortificaciones: +208%"],
+            imagen: "./IMG/grifoBV.png", 
+          },
+          6:{
+            nombre: "Grifo de batalla 6",
+            estadisticas: ["Fuerza: 19 000", "Salud: 57 000", "Capacidad de carga: 1000"],
+            caracteristicas: ["Guardia, Bestia, Unidad voladora", "Fuerza contra unidades montadas: +592%", "Fuerza contra fortificaciones: +311%"],
+            imagen: "./IMG/grifoBVI.png", 
+          },
+          7:{
+            nombre: "Grifo de batalla 7",
+            estadisticas: ["Fuerza: 34 000", "Salud: 102 000", "Capacidad de carga: 1000"],
+            caracteristicas: ["Guardia, Bestia, Unidad voladora", "Fuerza contra unidades montadas: +888%", "Fuerza contra fortificaciones: +467%"],
+            imagen: "./IMG/grifoBVII.png", 
+          },
+        },
+        arbalestero:{
+          6:{
+            nombre: "Arbalestero pesado 6",
+            estadisticas: ["Fuerza: 940", "Salud: 2820", "Capacidad de carga: 100"],
+            caracteristicas: ["Guardia, Humano, Unidad a distancia", "Fuerza contra unidades cuerpo a cuerpo: +395%", "Fuerza contra fortificaciones: +509%"],
+            imagen: "./IMG/arbalesVI.png", 
+          },
+          7:{
+            nombre: "Arbalestero pesado 7",
+            estadisticas: ["Fuerza: 1700", "Salud: 5100", "Capacidad de carga: 100"],
+            caracteristicas: ["Guardia, Humano, Unidad a distancia", "Fuerza contra unidades cuerpo a cuerpo: +592%", "Fuerza contra fortificaciones: +763%"],
+            imagen: "./IMG/arbalesVII.png", 
+          },
+        },
+        alabardero:{
+          6:{
+            nombre: "Alabardero pesado 6",
+            estadisticas: ["Fuerza: 940", "Salud: 2820", "Capacidad de carga: 250"],
+            caracteristicas: ["Guardia, Humano, Unidad cuerpo a cuerpo", "Fuerza contra unidades montadas: +296%", "Fuerza contra bestias: +608%"],
+            imagen: "./IMG/alabarderoVI.png", 
+          },
+          7:{
+            nombre: "Alabardero pesado 7",
+            estadisticas: ["Fuerza: 1700", "Salud: 5100", "Capacidad de carga: 250"],
+            caracteristicas: ["Guardia, Humano, Unidad cuerpo a cuerpo", "Fuerza contra unidades montadas: +444%", "Fuerza contra bestias: +911%"],
+            imagen: "./IMG/alabarderoVII.png", 
+          },
+        },
+        caballeroPesado:{
+          6:{
+            nombre: "Caballero montado 6",
+            estadisticas: ["Fuerza: 1900", "Salud: 5700", "Capacidad de carga: 200"],
+            caracteristicas: ["Guardia, Humano, Unidad montada", "Fuerza contra unidades a distancia: +494%", "Fuerza contra bestias: +410%"],
+            imagen: "./IMG/caballeromontadoVI.png",   
+          },
+          7:{
+            nombre: "Caballero montado 7",
+            estadisticas: ["Fuerza: 3400", "Salud: 10 200", "Capacidad de carga: 200"],
+            caracteristicas: ["Guardia, Humano, Unidad montada", "Fuerza contra unidades a distancia: +740%", "Fuerza contra bestias: +615%"],
+            imagen: "./IMG/caballeromontadoVII.png",   
+          },
+        },
+        purificador:{
+          1:{
+          nombre: "Caballero montado 7",
+            estadisticas: ["Fuerza: 3400", "Salud: 10 200", "Capacidad de carga: 200"],
+            caracteristicas: ["Guardia, Humano, Unidad montada", "Fuerza contra unidades a distancia: +740%", "Fuerza contra bestias: +615%"],
+            imagen: "./IMG/caballeromontadoVII.png", 
+        },
+      },
       };
 
       // Función para actualizar los niveles de tropa según el tipo seleccionado
@@ -218,7 +288,7 @@
       </ol>
 
       <!-- empieza la selección de tropas-->
-      <h2>Selecciona un Tipo de Tropa y Nivel</h2>
+      <h2>Selecciona un tipo de tropa y nivel</h2>
 
       <!-- Menú para seleccionar el tipo de tropa -->
       <label for="tipoTropa">Tipo de tropa:</label>
@@ -226,7 +296,13 @@
         <option value="lancero">Lancero</option>
         <option value="jinete">Jinete</option>
         <option value="arquero">Arquero</option>
-        <option value="arbalestero">Arbalestero</option>
+        <option value="grifoB">Grifo de batalla</option>
+        <option value="arbalestero">Arbalestero pesado</option>
+        <option value="alabardero">Alabardero pesado</option>
+        <option value="caballeroPesado">Caballero montado</option>
+        <option value="purificador">Purificador</option>
+        <option value="arquero">Arquero</option>
+        <option value="arquero">Arquero</option>
         <option value="arquero">Arquero</option>
         <option value="arquero">Arquero</option>
         <option value="arquero">Arquero</option>
