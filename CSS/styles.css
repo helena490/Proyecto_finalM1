@@ -1,21 +1,60 @@
-       /* Estilos básicos */
-       body { font-family: Arial, sans-serif; text-align: justify; background-color:rgba(220, 220, 220, 0.63);}
-       h1, h2{text-align: center;}
-       a{font-size: small; color: darkred;}
-       .container { max-width: 700px; margin: auto; padding: 20px; }
-       .troop-info { 
-           display: flex; 
-           align-items: flex-start; 
-           gap: 20px; 
-           margin-top: 20px; 
-           padding: 10px; 
-           border: 3px solid #6d0505; 
-           background-color: #f9f9f9; 
-           text-align: left;
-       }
-       .troop-image { width: 100%; max-width: 150px; }
-       select, button { padding: 8px; margin-top: 10px; }
-       .section { margin-top: 10px; }
-       .section h3 { margin-bottom: 5px; }
-       ul { list-style-type: none; padding: 0; margin: 0; text-align: center;}
-       ul li { padding: 5px 0; }
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgba(220, 220, 220, 0.63);
+}
+h1,
+h2 {
+  text-align: center;
+}
+p {
+  text-align: justify;
+}
+a {
+  font-size: small;
+  color: darkred;
+}
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 15px;
+  text-align: center;
+}
+.troop-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+  padding: 10px;
+  border: 3px solid #6d0505;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+.troop-image {
+  width: 100%;
+  max-width: 200px;
+}
+select {
+  padding: 10px;
+  margin-top: 10px;
+}
+button {
+  padding: 10px;
+  margin-top: 20px;
+  background-color:burlywood;
+}
+.section {
+  margin-top: 10px;
+}
+.section h3 {
+  margin-bottom: 3px;
+  color: #6d0505;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+ul li {
+  padding: 5px 0;
+}
