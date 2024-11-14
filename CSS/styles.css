@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-color: whitesmoke;
+}
+p {
+  text-align: justify;
+}
+a {
+  font-size: small;
+  font-family: Arial, Helvetica, sans-serif;
+  color: darkred;
+}
+
+label {
+  font-weight: bold;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 10px;
+  background-color: antiquewhite;
+}
+.description {
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 15px;
+  background-color:burlywood;
+}
+.troop-info {
+  margin-top: 20px;
+  padding: 10px;
+  border: 3px dashed #b40707;
+  background-color: #837d7d27;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  text-align: left;
+}
+.troop-image {
+  width: 100%;
+  max-width: 150px;
+}
+.section {
+  margin-top: 1px;
+}
+.section h3 {
+  margin-bottom: 10px;
+}
+.characteristics,
+.statistics {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.characteristics li,
+.statistics li {
+  padding: 5px 0;
+}
+select,
+button {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: rgba(122, 17, 3, 0.164);
+}
