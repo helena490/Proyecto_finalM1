@@ -301,36 +301,76 @@
         espia:{
           1:{
             nombre: "Espía 1",
-            estadisticas: ["Fuerza: 25", "Salud: 75", "Capacidad de carga: 100"],
-            caracteristicas: ["Especialista, Humano, Unidad cuerpo a cuerpo", "Fuerza contra humanos: +105%", "Fuerza contra unidades montadas: +20%"],
-            imagen: "./IMG/espadaI.png",       
+            estadisticas: ["Fuerza: 25", "Salud: 75", "Capacidad de carga: 150"],
+            caracteristicas: ["Especialista, Humano, Explorador"],
+            imagen: "./IMG/espiaI.png",       
           },
           2:{
-            nombre: "Espadachín 2",
-            estadisticas: ["Fuerza: 90", "Salud: 270", "Capacidad de carga: 100"],
-            caracteristicas: ["Especialista, Humano, Unidad cuerpo a cuerpo", "Fuerza contra humanos: +105%", "Fuerza contra unidades montadas: +29%", "Fuerza contra bestias: +60%"],
-            imagen: "./IMG/espadaII.png",     
+            nombre: "Espía 2",
+            estadisticas: ["Fuerza: 45", "Salud: 135", "Capacidad de carga: 150"],
+            caracteristicas: ["Especialista, Humano, Explorador"],
+            imagen: "./IMG/espiaII.png",    
           },
           3:{
-            nombre: "Espadachín 3",
-            estadisticas: ["Fuerza: 160", "Salud: 480", "Capacidad de carga: 100"],
-            caracteristicas: ["Especialista, Humano, Unidad cuerpo a cuerpo", "Fuerza contra humanos: +105%", "Fuerza contra unidades montadas: +44%", "Fuerza contra bestias: +90%"],
-            imagen: "./IMG/espadaIII.png",      
+            nombre: "Espía 3",
+            estadisticas: ["Fuerza: 80", "Salud: 240", "Capacidad de carga: 150"],
+            caracteristicas: ["Especialista, Humano, Explorador"],
+            imagen: "./IMG/espiaIII.png", 
           },
           4:{
-            nombre: "Espadachín 4",
-            estadisticas: ["Fuerza: 290", "Salud: 870", "Capacidad de carga: 100"],
-            caracteristicas: ["Especialista, Humano, Unidad cuerpo a cuerpo", "Fuerza contra humanos: +105%", "Fuerza contra unidades montadas: +66%", "Fuerza contra bestias: +135%"],
-            imagen: "./IMG/espadaIV.png",       
+            nombre: "Espía 4",
+            estadisticas: ["Fuerza: 150", "Salud: 450", "Capacidad de carga: 150"],
+            caracteristicas: ["Especialista, Humano, Explorador"],
+            imagen: "./IMG/espiaIV.png",     
           },
           5:{
-            nombre: "Espadachín 5",
-            estadisticas: ["Fuerza: 520", "Salud: 1560", "Capacidad de carga: 100"],
-            caracteristicas: ["Especialista, Humano, Unidad cuerpo a cuerpo", "Fuerza contra humanos: +105%", "Fuerza contra unidades montadas: +99%", "Fuerza contra bestias: +203%"],
-            imagen: "./IMG/espadaV.png",      
+            nombre: "Espía 5",
+            estadisticas: ["Fuerza: 260", "Salud: 780", "Capacidad de carga: 150"],
+            caracteristicas: ["Especialista, Humano, Explorador"],
+            imagen: "./IMG/espiaV.png",     
           },
-        }
-      };
+        },
+        ballestero:{
+          5:{
+            nombre: "Ballestero de élite 5",
+            estadisticas: ["Fuerza: 520", "Salud: 1560", "Capacidad de carga: 100"],
+            caracteristicas: ["Especialista, Humano, Unidad a distancia", "Fuerza contra humanos: +105%","Fuerza contra unidades cuerpo a cuerpo: +132%", "Fuerza contra unidades voladoras: +170%"],
+            imagen: "./IMG/ballestV.png",     
+          },
+          6:{
+            nombre: "Ballestero de élite 6",
+            estadisticas: ["Fuerza: 940", "Salud: 2820", "Capacidad de carga: 100"],
+            caracteristicas: ["Especialista, Humano, Unidad a distancia", "Fuerza contra humanos: +105%","Fuerza contra unidades cuerpo a cuerpo: +197%", "Fuerza contra unidades voladoras: +254%"],
+            imagen: "./IMG/ballestVI.png",     
+          },
+          7:{
+            nombre: "Ballestero de élite 7",
+            estadisticas: ["Fuerza: 1700", "Salud: 5100", "Capacidad de carga: 100"],
+            caracteristicas: ["Especialista, Humano, Unidad a distancia", "Fuerza contra humanos: +105%","Fuerza contra unidades cuerpo a cuerpo: +296%", "Fuerza contra unidades voladoras: +382%"],
+            imagen: "./IMG/ballestVII.png",   
+          },
+        lion:{
+          5:{
+            nombre: "Jinete de león 5",
+            estadisticas: ["Fuerza: 1050", "Salud: 3150", "Capacidad de carga: 200"],
+            caracteristicas: ["Especialista, Humano, Unidad montada", "Fuerza contra humanos: +105%","Fuerza contra unidades a distancia: +165%", "Fuerza contra armas de asedio: +137%"],
+            imagen: "./IMG/leonV.png",   
+          },
+          6:{
+            nombre: "Jinete de león 6",
+            estadisticas: ["Fuerza: 1900", "Salud: 5700", "Capacidad de carga: 200"],
+            caracteristicas: ["Especialista, Humano, Unidad montada", "Fuerza contra humanos: +105%","Fuerza contra unidades a distancia: +247%", "Fuerza contra armas de asedio: +205%"],
+            imagen: "./IMG/leonVI.png",   
+          },
+          7:{
+            nombre: "Jinete de león 7",
+            estadisticas: ["Fuerza: 3400", "Salud: 10 200", "Capacidad de carga: 200"],
+            caracteristicas: ["Especialista, Humano, Unidad montada", "Fuerza contra humanos: +105%","Fuerza contra unidades a distancia: +307%", "Fuerza contra armas de asedio: +308%"],
+            imagen: "./IMG/leonVII.png",   
+          },
+        },
+      },
+    };
 
       // Función para actualizar los niveles de tropa según el tipo seleccionado
       function actualizarNiveles() {
@@ -460,8 +500,8 @@
         <option value="corax">Córax</option>
         <option value="espadachin">Espadachín</option>
         <option value="espia">Espía</option>
-        <option value="arquero">Arquero</option>
-        <option value="arquero">Arquero</option>
+        <option value="ballestero">Ballestero de élite</option>
+        <option value="lion">Jinete de león</option>
         <option value="arquero">Arquero</option>
 
       </select>
