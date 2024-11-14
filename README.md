@@ -35,8 +35,9 @@ El proyecto se organiza de la siguiente manera:
    ```bash
     git clone https://github.com/tu-usuario/total-battle-tropas.git
 2. Navega a la carpeta del proyecto
+    ```bash
      cd total-battle-tropas
-3. Abre el archivo index.html en un navegador para ver la página en funcionamiento.
+4. Abre el archivo index.html en un navegador para ver la página en funcionamiento.
 
 ## Uso
 1. Selecciona un Tipo de Tropa desde el menú desplegable.
