@@ -349,6 +349,7 @@
             caracteristicas: ["Especialista, Humano, Unidad a distancia", "Fuerza contra humanos: +105%","Fuerza contra unidades cuerpo a cuerpo: +296%", "Fuerza contra unidades voladoras: +382%"],
             imagen: "./IMG/ballestVII.png",   
           },
+        },
         lion:{
           5:{
             nombre: "Jinete de león 5",
@@ -369,7 +370,68 @@
             imagen: "./IMG/leonVII.png",   
           },
         },
-      },
+        buitre:{
+          5:{
+            nombre: "Buitre 7",
+            estadisticas: ["Fuerza: 520", "Salud: 1560", "Capacidad de carga: 100"],
+            caracteristicas: ["Especialista, Humano, Unidad voladora", "Fuerza contra humanos: +105%","Fuerza contra unidades montadas: +197%", "Fuerza contra fortificaciones: +104%"],
+            imagen: "./IMG/buitreV.png",   
+          },
+          6:{
+            nombre: "Buitre 6",
+            estadisticas: ["Fuerza: 940", "Salud: 2820", "Capacidad de carga: 100"],
+            caracteristicas: ["Especialista, Humano, Unidad voladora", "Fuerza contra humanos: +105%","Fuerza contra unidades montadas: +296%", "Fuerza contra fortificaciones: +156%"],
+            imagen: "./IMG/buitreVI.png",   
+          },
+          7:{
+            nombre: "Buitre 7",
+            estadisticas: ["Fuerza: 1700", "Salud: 5100", "Capacidad de carga: 100"],
+            caracteristicas: ["Especialista, Humano, Unidad voladora", "Fuerza contra humanos: +105%","Fuerza contra unidades montadas: +444%", "Fuerza contra fortificaciones: +234%"],
+            imagen: "./IMG/buitreVII.png",   
+          },
+        },
+       caballeroPesado:{
+          6:{
+            nombre: "Caballero pesado 6",
+            estadisticas: ["Fuerza: 940", "Salud: 2820", "Capacidad de carga: 100"],
+            caracteristicas: ["Especialista, Humano, Unidad cuerpo a cuerpo", "Fuerza contra humanos: +105%","Fuerza contra unidades montadas: +148%", "Fuerza contra bestias: +304%"],
+            imagen: "./IMG/cabpesadoVI.png",   
+          }, 
+          7:{
+            nombre: "Caballero pesado 7",
+            estadisticas: ["Fuerza: 1700", "Salud: 5100", "Capacidad de carga: 100"],
+            caracteristicas: ["Especialista, Humano, Unidad cuerpo a cuerpo", "Fuerza contra humanos: +105%","Fuerza contra unidades montadas: +222%", "Fuerza contra bestias: +456%"],
+            imagen: "./IMG/cabPesadoVII.png",   
+          }, 
+        },
+        cazador:{
+          6:{
+            nombre: "Cazador rápido 6",
+            estadisticas: ["Fuerza: 470", "Salud: 1410", "Capacidad de carga: 150"],
+            caracteristicas: ["Especialista, Humano, Explorador"],
+            imagen: "./IMG/cazadorVI.png",   
+          }, 
+          7:{
+            nombre: "Cazador rápido 7",
+            estadisticas: ["Fuerza: 850", "Salud: 2550", "Capacidad de carga: 150"],
+            caracteristicas: ["Especialista, Humano, Explorador"],
+            imagen: "./IMG/cazadorVII.png",   
+          }, 
+        },
+        legitimista:{
+          1:{
+            nombre: "Legitimista 1",
+            estadisticas: ["Fuerza: 3060", "Salud: 9180", "Capacidad de carga: 100"],
+            caracteristicas: ["Especialista, Humano, Unidad a distancia", "Fuerza contra unidades cuerpo a cuerpo: +444%", "Fuerza contra unidades voladoras: +572%"],
+            imagen: "./IMG/legitimistaI.png",   
+          }, 
+          2:{
+            nombre: "Legitimista 2",
+            estadisticas: ["Fuerza: 5510", "Salud: 16 530", "Capacidad de carga: 100"],
+            caracteristicas: ["Especialista, Humano, Unidad a distancia", "Fuerza contra unidades cuerpo a cuerpo: +667%", "Fuerza contra unidades voladoras: +859%"],
+            imagen: "./IMG/legitimistaII.png",      
+          }, 
+        },
     };
 
       // Función para actualizar los niveles de tropa según el tipo seleccionado
@@ -502,8 +564,14 @@
         <option value="espia">Espía</option>
         <option value="ballestero">Ballestero de élite</option>
         <option value="lion">Jinete de león</option>
+        <option value="caballeroPesado">Caballero pesado</option>
+        <option value="cazador">Cazador rápido</option>
         <option value="arquero">Arquero</option>
-
+        <option value="arquero">Arquero</option>
+        <option value="arquero">Arquero</option>
+        <option value="arquero">Arquero</option>
+        <option value="arquero">Arquero</option>
+        <option value="arquero">Arquero</option>
       </select>
 
       <!-- Menú para seleccionar el nivel de tropa -->
