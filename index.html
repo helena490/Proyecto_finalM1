@@ -1,185 +1,212 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tropas TB</title>
-    <link rel="icon" href="./IMG/headicon.png" />
-    <link rel="stylesheet" href="./CSS/styles.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="icon" href="./IMG/headicon.png">
+    <title>Tropas en TB</title>
 
     <script>
-      function mostrarInfoTropa() {
-        const tipo = document.getElementById("tipoTropa").value;
-        const nivel = document.getElementById("nivelTropa").value;
-        const nombreTropa = document.getElementById("nombreTropa");
-        const listaCaracteristicas = document.getElementById(
-          "listaCaracteristicas"
-        );
-        const listaEstadisticas = document.getElementById("listaEstadisticas");
-        const imagenTropa = document.getElementById("imagenTropa");
-
+        // Definimos las tropas y sus niveles con características y estadísticas
         const tropas = {
-          infanteria: {
-            1: {
-              nombre: "Lancero Nivel 1",
-              estadisticas: ["Fuerza: 50", "Salud: 50", "Defensa: 30"],
-              caracteristicas: ["Ataque bajo", "Defensa media"],
-              imagen: "ruta_a_imagenes/infanteria_nivel1.jpg",
+            infanteria: {
+                1: {
+                    nombre: "Infantería Nivel 1",
+                    estadisticas: ["Vida: 100", "Ataque: 50", "Defensa: 30"],
+                    caracteristicas: ["Ataque bajo", "Defensa media"],
+                    imagen: "ruta_a_imagenes/infanteria_nivel1.jpg"
+                },
+                2: {
+                    nombre: "Infantería Nivel 2",
+                    estadisticas: ["Vida: 150", "Ataque: 70", "Defensa: 40"],
+                    caracteristicas: ["Ataque medio", "Defensa media"],
+                    imagen: "ruta_a_imagenes/infanteria_nivel2.jpg"
+                },
+                3: {
+                    nombre: "Infantería Nivel 3",
+                    estadisticas: ["Vida: 200", "Ataque: 90", "Defensa: 50"],
+                    caracteristicas: ["Ataque alto", "Defensa alta"],
+                    imagen: "ruta_a_imagenes/infanteria_nivel3.jpg"
+                }
             },
-            2: {
-              nombre: "Infantería Nivel 2",
-              estadisticas: ["Vida: 150", "Ataque: 70", "Defensa: 40"],
-              caracteristicas: ["Ataque medio", "Defensa media"],
-              imagen: "ruta_a_imagenes/infanteria_nivel2.jpg",
+            caballeria: {
+                1: {
+                    nombre: "Caballería Nivel 1",
+                    estadisticas: ["Vida: 120", "Ataque: 60", "Defensa: 20"],
+                    caracteristicas: ["Ataque medio", "Defensa baja"],
+                    imagen: "ruta_a_imagenes/caballeria_nivel1.jpg"
+                },
+                2: {
+                    nombre: "Caballería Nivel 2",
+                    estadisticas: ["Vida: 180", "Ataque: 90", "Defensa: 30"],
+                    caracteristicas: ["Ataque alto", "Defensa media"],
+                    imagen: "ruta_a_imagenes/caballeria_nivel2.jpg"
+                }
             },
-          },
-          caballeria: {
-            1: {
-              nombre: "Caballería Nivel 1",
-              estadisticas: ["Vida: 120", "Ataque: 60", "Defensa: 20"],
-              caracteristicas: ["Ataque medio", "Defensa baja"],
-              imagen: "ruta_a_imagenes/caballeria_nivel1.jpg",
-            },
-            2: {
-              nombre: "Caballería Nivel 2",
-              estadisticas: ["Vida: 180", "Ataque: 90", "Defensa: 30"],
-              caracteristicas: ["Ataque alto", "Defensa media"],
-              imagen: "ruta_a_imagenes/caballeria_nivel2.jpg",
-            },
-          },
-          arqueros: {
-            1: {
-              nombre: "Arqueros Nivel 1",
-              estadisticas: ["Vida: 80", "Ataque: 70", "Defensa: 10"],
-              caracteristicas: ["Ataque alto", "Defensa baja"],
-              imagen: "ruta_a_imagenes/arqueros_nivel1.jpg",
-            },
-            2: {
-              nombre: "Arqueros Nivel 2",
-              estadisticas: ["Vida: 100", "Ataque: 90", "Defensa: 20"],
-              caracteristicas: ["Ataque muy alto", "Defensa media"],
-              imagen: "ruta_a_imagenes/arqueros_nivel2.jpg",
-            },
-          },
+            arqueros: {
+                1: {
+                    nombre: "Arqueros Nivel 1",
+                    estadisticas: ["Vida: 80", "Ataque: 70", "Defensa: 10"],
+                    caracteristicas: ["Ataque alto", "Defensa baja"],
+                    imagen: "ruta_a_imagenes/arqueros_nivel1.jpg"
+                },
+                2: {
+                    nombre: "Arqueros Nivel 2",
+                    estadisticas: ["Vida: 100", "Ataque: 90", "Defensa: 20"],
+                    caracteristicas: ["Ataque muy alto", "Defensa media"],
+                    imagen: "ruta_a_imagenes/arqueros_nivel2.jpg"
+                },
+                3: {
+                    nombre: "Arqueros Nivel 3",
+                    estadisticas: ["Vida: 120", "Ataque: 110", "Defensa: 30"],
+                    caracteristicas: ["Ataque extremo", "Defensa media"],
+                    imagen: "ruta_a_imagenes/arqueros_nivel3.jpg"
+                },
+                4: {
+                    nombre: "Arqueros Nivel 4",
+                    estadisticas: ["Vida: 140", "Ataque: 130", "Defensa: 40"],
+                    caracteristicas: ["Ataque devastador", "Defensa alta"],
+                    imagen: "ruta_a_imagenes/arqueros_nivel4.jpg"
+                }
+            }
         };
 
-        listaCaracteristicas.innerHTML = "";
-        listaEstadisticas.innerHTML = "";
+        // Función para actualizar los niveles de tropa según el tipo seleccionado
+        function actualizarNiveles() {
+            const tipo = document.getElementById("tipoTropa").value;
+            const nivelSelect = document.getElementById("nivelTropa");
 
-        const tropaSeleccionada = tropas[tipo][nivel];
-        if (tropaSeleccionada) {
-          nombreTropa.textContent = tropaSeleccionada.nombre;
+            nivelSelect.innerHTML = "";
 
-          tropaSeleccionada.estadisticas.forEach((estadistica) => {
-            const li = document.createElement("li");
-            li.textContent = estadistica;
-            listaEstadisticas.appendChild(li);
-          });
+            Object.keys(tropas[tipo]).forEach(nivel => {
+                const option = document.createElement("option");
+                option.value = nivel;
+                option.textContent = `Nivel ${nivel}`;
+                nivelSelect.appendChild(option);
+            });
 
-          tropaSeleccionada.caracteristicas.forEach((caracteristica) => {
-            const li = document.createElement("li");
-            li.textContent = caracteristica;
-            listaCaracteristicas.appendChild(li);
-          });
-
-          imagenTropa.src = tropaSeleccionada.imagen;
-          imagenTropa.alt = `Imagen de ${tropaSeleccionada.nombre}`;
-        } else {
-          nombreTropa.textContent = "Tropa no disponible";
-          listaEstadisticas.innerHTML = "<li>Estadísticas no disponibles.</li>";
-          listaCaracteristicas.innerHTML =
-            "<li>Características no disponibles.</li>";
-          imagenTropa.src = "";
-          imagenTropa.alt = "";
+            mostrarInfoTropa();
         }
-      }
+
+        // Función para mostrar la información de la tropa seleccionada
+        function mostrarInfoTropa() {
+            const tipo = document.getElementById("tipoTropa").value;
+            const nivel = document.getElementById("nivelTropa").value;
+            const nombreTropa = document.getElementById("nombreTropa");
+            const listaEstadisticas = document.getElementById("listaEstadisticas");
+            const listaCaracteristicas = document.getElementById("listaCaracteristicas");
+            const imagenTropa = document.getElementById("imagenTropa");
+
+            // Limpiar las listas de estadísticas y características
+            listaEstadisticas.innerHTML = "";
+            listaCaracteristicas.innerHTML = "";
+
+            const tropaSeleccionada = tropas[tipo][nivel];
+            if (tropaSeleccionada) {
+                nombreTropa.textContent = tropaSeleccionada.nombre;
+
+                // Añadir estadísticas
+                tropaSeleccionada.estadisticas.forEach(estadistica => {
+                    const li = document.createElement("li");
+                    li.textContent = estadistica;
+                    listaEstadisticas.appendChild(li);
+                });
+
+                // Añadir características
+                tropaSeleccionada.caracteristicas.forEach(caracteristica => {
+                    const li = document.createElement("li");
+                    li.textContent = caracteristica;
+                    listaCaracteristicas.appendChild(li);
+                });
+
+                // Mostrar imagen de la tropa
+                imagenTropa.src = tropaSeleccionada.imagen;
+                imagenTropa.alt = `Imagen de ${tropaSeleccionada.nombre}`;
+            } else {
+                nombreTropa.textContent = "Tropa no disponible";
+                listaEstadisticas.innerHTML = "<li>Estadísticas no disponibles.</li>";
+                listaCaracteristicas.innerHTML = "<li>Características no disponibles.</li>";
+                imagenTropa.src = "";
+                imagenTropa.alt = "";
+            }
+        }
+
+        // Ejecuta la función al inicio para mostrar opciones de niveles según el tipo de tropa seleccionado por defecto
+        window.onload = actualizarNiveles;
     </script>
-  </head>
-  <body>
+</head>
+<body>
     <div class="container">
-      <!-- Descripción del Videojuego -->
-      <div class="description">
-        <h1>Tropas en Total Battle</h1>
-        <h2>
-          ¡Hola! En esta página encontrarás información breve de los tipos de
-          tropas que se encuentran en el juego.
-        </h2>
-        <p>
-          Total Battle es un juego de estrategia en el cual desarrollas tu
-          ejército y haces crecer tu ciudad. Conquista territorios, mejora tus
-          tropas y demuestra tus habilidades tácticas en batallas épicas. Únete
-          a un clan y conoce a personas de todas partes del mundo.
-        </p>
-        <p>
-          Aquí abajo te dejo los enlaces al canal oficial de Youtube y al
-          servidor del juego, donde podrás crear tu cuenta. Puedes jugar desde
-          browser, iOS y Android.
-        </p>
-        <p>
-          Si tienes alguna duda o sugerencia respecto al contenido aquí
-          mostrado, no dudes en contactarme vía email con el botón que se
-          encuentra al final de esta página.
-        </p>
-      </div>
-
-      <!-- Enlace al perfil de Youtube del juego -->
-      <ul>
-        <a
-          href="https://www.youtube.com/@TotalBattleTacticalStrategy"
-          target="_blank"
-          >Canal oficial de Total Battle en Youtube</a
-        >
-      </ul>
-      <!-- Enlace a la página de inicio de sesión del juego -->
-      <ul>
-        <a href="https://totalbattle.com/" target="_blank"
-          >Ir a la pagina oficial de Total Battle</a
-        >
-      </ul>
-
-      <!-- Selección de tropas -->
-      <h2>Selecciona una Tropa</h2>
-      <label for="tipoTropa">Tipo de tropa:</label>
-      <select id="tipoTropa" onchange="mostrarInfoTropa()">
-        <option value="Guardias">Guardias</option>
-        <option value="Especialistas">Especialistas</option>
-        <option value="Tropas de ingeniería">Tropas de ingeniería</option>
-        <option value="Dragones">Dragones</option>
-        <option value="Elementales">Elementales</option>
-        <option value="Gigantes">Gigantes</option>
-        <option value="Bestias">Bestias</option>
-      </select>
-
-      <label for="nivelTropa">Nivel de Tropa:</label>
-      <select id="nivelTropa" onchange="mostrarInfoTropa()">
-        <option value="1">Nivel 1</option>
-        <option value="2">Nivel 2</option>
-      </select>
-
-      <!-- Información de la tropa seleccionada -->
-      <div id="infoTropa" class="troop-info">
-        <img id="imagenTropa" class="troop-image" src="" alt="" />
-        <div>
-          <h2 id="nombreTropa">Selecciona una tropa</h2>
-          <div class="section">
-            <h3>Estadísticas:</h3>
-            <ul id="listaEstadisticas" class="statistics"></ul>
-          </div>
-          <div class="section">
-            <h3>Características:</h3>
-            <ul id="listaCaracteristicas" class="characteristics"></ul>
-          </div>
+        <!-- Descripción del Videojuego -->
+        <div class="description">
+         <h2>
+            ¡Hola! En esta página encontrarás información breve de los tipos de
+            tropas que se encuentran en el juego Total Battle.
+          </h2>
+          <p>
+            Total Battle es un juego de estrategia en el cual desarrollas tu
+            ejército y haces crecer tu ciudad. Conquista territorios, mejora tus
+            tropas y demuestra tus habilidades tácticas en batallas épicas. Únete
+            a un clan y conoce a personas de todas partes del mundo.
+          </p>
+          <p>
+            Aquí abajo te dejo los enlaces al canal oficial de Youtube y al
+            servidor del juego, donde podrás crear tu cuenta. Puedes jugar desde
+            browser, iOS y Android.
+          </p>
+          <p>
+            Si tienes alguna duda o sugerencia respecto al contenido aquí
+            mostrado, no dudes en contactarme vía email con el botón que se
+            encuentra al final de esta página.
+          </p>
         </div>
-      </div>
+  
+        <!-- Enlace al perfil de Youtube del juego -->
+        <ul>
+          <a
+            href="https://www.youtube.com/@TotalBattleTacticalStrategy"
+            target="_blank"
+            >Canal oficial de Total Battle en Youtube</a
+          >
+        </ul>
+        <!-- Enlace a la página de inicio de sesión del juego -->
+        <ul>
+          <a href="https://totalbattle.com/" target="_blank"
+            >Ir a la pagina oficial de Total Battle</a
+          >
+        </ul>
 
-      <!-- Botón de contacto -->
-      <div style="margin-top: 30px">
-        <button
-          onclick="location.href='mailto:tucorreo@ejemplo.com?subject=Dudas o Sugerencias sobre Total Battle'"
-        >
-          Contáctame para Dudas o Sugerencias
-        </button>
-      </div>
+  <!-- empieza la selección de tropas-->
+        <h2>Selecciona un Tipo de Tropa y Nivel</h2>
+
+        <!-- Menú para seleccionar el tipo de tropa -->
+        <label for="tipoTropa">Tipo de Tropa:</label>
+        <select id="tipoTropa" onchange="actualizarNiveles()">
+            <option value="infanteria">Infantería</option>
+            <option value="caballeria">Caballería</option>
+            <option value="arqueros">Arqueros</option>
+        </select>
+
+        <!-- Menú para seleccionar el nivel de tropa -->
+        <label for="nivelTropa">Nivel de Tropa:</label>
+        <select id="nivelTropa" onchange="mostrarInfoTropa()"></select>
+
+        <!-- Información de la tropa seleccionada -->
+        <div id="infoTropa" class="troop-info">
+            <img id="imagenTropa" class="troop-image" src="" alt="">
+            <div>
+                <h2 id="nombreTropa">Selecciona una tropa</h2>
+                <div class="section">
+                    <h3>Estadísticas:</h3>
+                    <ul id="listaEstadisticas"></ul>
+                </div>
+                <div class="section">
+                    <h3>Características:</h3>
+                    <ul id="listaCaracteristicas"></ul>
+                </div>
+            </div>
+        </div>
     </div>
-  </body>
+</body>
 </html>
