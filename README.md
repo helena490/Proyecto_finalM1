@@ -56,3 +56,5 @@ Las contribuciones son bienvenidas. Si deseas mejorar esta página web, por favo
 
 ## Licencia
 Este proyecto está bajo la Licencia MIT.
+## Autor
+- [@helena490](https://www.github.com/helena490)
